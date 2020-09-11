@@ -1,3 +1,8 @@
+
+  
+
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -112,32 +117,65 @@
   width:100%;
 }
 
+
+
 @media(min-width:960px){
   #movies .col-md-3 .well{
-    height: 390px;
+    height: 420px;
   }
 
   #movies .col-md-3 img{
-    height:240px;
+    height:320px;
+    background-color: blue;
+    color: white;
   }
+}
+
+
+
+#banner_img{
+  height: 40%;
+  width: 40%;
+  margin: auto;
+}
+
+.primary-color-dark{
+background-color: #0d47a1;
+color:black;
+}
+
+.navbar-brand{
+  color: #0d47a1;
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+#search_text{
+  font-size: 2em;
+  font-weight: bolder;
 }
 
      </style>
 
   </head>
-  <body>
+  <body class="primary-color-dark">
+
 
     <nav class="navbar navbar-default">
-      <div class="container">
+      <div class="container p-3 mb-2 bg-primary text-white">
+      
+        <img id=banner_img
+         src="img/peliculon_logo.png" alt="Logo">
         <div class="navbar-header">
-          <center><a class="navbar-brand" href="index.html">Mis Peliculones</a></center>
+         
+
         </div>
       </div>
     </nav>
 
-    <div class="container">
-    	<div class="jumbotron">
-	    	<h3 class="text-center">Busca un Peliculón</h3>
+    <div class="container bg-warning">
+    	<div class="jumbotron bg-primary">
+	    	<h3 id="search_text" class="text-center text-warning">Busca un Peliculón</h3>
 	    	<form id="searchForm">
 	    		<input type="text" class="form-control" id="searchText" placeholder="Que tienes ganas de ver hoy?...">
 	    	</form>
@@ -147,6 +185,13 @@
     <div class="container">
       <div id="movies" class="row"></div>
     </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/main.js"></script>
  
   </body>
 </html>
